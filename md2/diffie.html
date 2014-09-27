@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" /> 
+	<title>Tugas Diffie Hellman</title> 
+	<link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+	<h1> Tugas Pemrograman - Diffie Hellman </h1>
+	<h2> Rakina Zata Amni, 1306398951 </h2>
+	<h3> Kelas A, Asdos Dinda Susanti </h3>
+	<hr>
+	<h2> Apa itu algoritma Diffie Hellman? </h2>
+	<p>
+		Algoritma Diffie Hellman adalah algoritma yang digunakan untuk mendapatkan shared key/kunci rahasia bersama. Kunci yang didapatkan dari algoritma ini dapat digunakan untuk enkripsi. Sang pengirim dapat mengenkripsi dengan kunci yang didapat dan sang penerima dapat mendekripsi dengan kunci yang didapat. 
+	</p>
+	<h2> Bagaimana cara kerja algoritma Diffie Hellman? </h2>
+	<ul>
+		<li> Kedua pihak (sebut saja Alice dan Bob) pertama-tama harus menyetujui sebuah bilangan prima p dan bilangan bulat g yang merupakan primitive root modulo p. </li>
+		<li>Setelah itu, Alice akan memilih sebuah bilangan bulat rahasia a, dan Bob akan memilih sebuah bilangan bulat rahasia b. Alice lalu akan menghitung A = g<sup>a</sup> mod p dan Bob akan menghitung B = g<sup>b</sup> mod p.   </li>
+		<li>Alice lalu akan mengirimkan A ke Bob dan Bob akan mengirimkan B ke Alice.  </li> 
+		<li>Alice akan menghitung shared keynya, yaitu B<sup>a</sup> mod p. Bob akan menghitung shared keynya, A<sup>b</sup> mod p. </li> 
+		<li>Perhatikan bahwa A<sup>b mod p = B<sup>a</sup> mod p = g<sup>ab</sup> mod p.  </li>
+		<li>Alice dan Bob kini memiliki shared key yang sama dan rahasia.  </li>
+	</ul>
+	<iframe width="480" height="360" src="http://www.youtube.com/embed/M-0qt6tdHzk?rel=0&amp;showinfo=0" style="border:0;" allowfullscreen></iframe>
+	<hr>
+	<h2> Program dan Laporan </h2>
+	<ul>
+		<li> <a href = "DiffieHellman.cpp">Source code (C++)</a> </li>
+		<li> <a href = "diffie.exe">Executable program (C++)</a> </li>
+		<li> <a href = "diffie.php"> Web app (PHP)</a> </li>
+		<li> <a href = "Tugas1-1306398951-Rakina-Dinda.pdf">Laporan</a></li>
+	</ul>
+	<p>
+		<b> Instruksi: </b> <br>
+		Untuk kode C++, compile source code atau langsung jalankan .exe-nya. <br>
+		Untuk web app, bacalah tulisan yang ada di halaman web-app. <br> 
+	</p>
+	<hr>
+	<h2> Referensi </h2>
+	<ul>
+		<li><a href = "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Halaman Wikipedia Diffie-Hellman</a></li>
+		<li><a href = "https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/diffie-hellman-key-exchange-part-2"> Video Khan Academy </a></li>
+	</ul>
+</body>
+</html>
