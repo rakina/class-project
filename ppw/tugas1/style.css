@@ -1,0 +1,199 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic|Open+Sans+Condensed:300,300italic);
+
+body, html{
+	margin: 0;
+	height: 100%;
+}
+
+p{
+	margin: 0px;
+	font-size: 15pt;
+}
+
+h1{
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 32pt;
+}
+
+h3{
+	margin: 0;
+}
+.banner{
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 10% 0;
+	
+}
+
+.banner img{
+	max-height: 400px;
+	width: auto;
+}
+
+#nav{
+	width: 100%;
+	background-color: #333333;
+	position: fixed;
+	border-bottom: 3px solid #222222;
+}
+
+#nav ul{
+	float: right;
+	padding: 0;
+	margin: 0;
+    list-style-type: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+#nav li {
+    display: inline;
+}
+
+#nav li:hover a{
+	color: white;
+	background-color: #e67e22;
+}
+
+#nav a{
+	padding: 15px;
+	height: 100%;
+	display: inline-block;
+	color: #637b93;
+	text-decoration: none;
+}
+
+#logo{
+	margin-top: 12px;
+	margin-left: 20px;
+	float: left;
+	height: 30px;
+	width: auto;
+}
+
+
+.section{
+	vertical-align: middle;
+	margin: 0;
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding: 50px;
+}
+
+.section img{
+	margin: 15px;
+}
+
+button{
+	cursor: pointer;
+	color: #f1f2f2;
+  	padding: 10px 20px 10px 20px;
+  	text-decoration: none;
+  	border: none;
+}
+
+.black{
+	background: #1a1a1a;
+}
+
+button .black:hover {
+  	background: #101010;
+}
+
+.blue{
+	background: #35424f;
+	color: #f1f2f2;
+}
+
+.dark-gray{
+	background-color: #1a1a1a;
+	color: #f1f2f2;
+}
+
+.white-gray{
+	background: #dfdfdf;
+	color: black;
+}
+
+button .white-gray:hover{
+	background: #d2d2d2;
+	color: black;
+}
+
+.orange{
+	background: #e67e22;
+	color: #111111;
+}
+
+
+.gray{
+	background: #b9b9b9;
+	color: #1a1a1a;
+}
+
+table{
+	margin: 0 auto;
+}
+
+.item{
+	margin: 10px 25px;
+	display: inline-block;
+}
+
+.item img{
+	max-height: 150px;
+	width: auto;
+}
+
+#quote{
+	color: #f1f2f2;
+	background-size: 100%;
+}
+#quote h1{
+	margin-top: 30px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+#quote img{
+	max-height: 300px;
+	width: auto;
+	margin: 0;
+}
+
+.portrait{
+	max-height: 250px;
+	width: auto;
+}
+
+form{
+	margin: 0 auto;
+
+}
+form table{
+	text-align: left;
+}
+
+input[type="text"], input[type="email"], textarea{
+	border: none;
+	background-color: #f1f2f2;
+	padding: 5px;
+	width: 250px;
+	font-family: 'Oswald', sans-serif;
+}
+
+footer{
+	background-color: #080808;
+	color: white;
+	text-align: right;
+    font-family: 'Oswald', sans-serif;
+    padding: 12px;
+}
+
+footer a{
+	text-decoration: none;
+    color: #a1a2a2;
+}
