@@ -1,0 +1,87 @@
+<!doctype html>
+<head>
+	<meta charset = "utf-8">
+	<title> Aperture Science </title>
+	<link rel = "icon" href = "img/logo.png">
+	<link rel = "stylesheet" href = "style.css">
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+	<script type = "text/javascript" src = "kya.js">	</script>
+</head>
+<body> 
+	<header  id = "nav">
+		<img id = "logo" src = "img/header.png" alt = "">
+		<ul>
+			<li> <a href = "index.html">HOME</a></li>
+			<li> <a href = "about.html"> ABOUT </a> </li>
+			<li> <a href = "service.html"> SERVICE </a> </li> 
+			<li> <a href = "team.html"> TEAM </a> </li> 
+			<li> <a href = "contact.html">CONTACT</a> </li> 
+		</ul>
+	</header>
+	<div class = "banner" style ="background-image: url('img/call.jpg');" id = "quote"  >
+		<img src = "img/telpon.png" alt = "">
+		<h1> <em> Ready for some science? </em> </h1>
+	</div>
+
+	<div id = "formnya" class = "section white-gray" >
+		<form id ="theme">
+			<select id = "tema">
+				<option value = "white-gray"> Light Gray </option>
+				<option value = "dark-gray"> Dark Gray </option>
+			</select>
+		</form>
+		<h1> LEAVE A MESSAGE. </h1>
+		
+		<form>
+			<table>
+				<tr>
+					<td> Your name: </td>
+					<td> <input type="text" autofocus  placeholder = "Chell [REDACTED]"> </td>
+				</tr>
+				<tr>
+					<td> Your email: </td>
+					<td> <input type="email"  placeholder = "rakina@valvesoftware.com"> </td>
+				</tr>
+				<tr>
+					<td> </td>
+					<td>
+						<input id = "warna" type = "color"> 
+						<select id = "fsize">
+							<option value = "10pt">10pt</option>
+							<option value = "14pt">14pt</option>
+							<option value = "16pt">16pt</option>
+							<option value = "20pt">20pt</option>
+							<option value = "25pt">25pt</option>
+						</select>
+						<input type = "checkbox" id = "bold"> Bold
+						<input type = "checkbox" id = "italic"> Italic
+						<input type = "checkbox" id = "under"> Underline
+					</td>
+				</tr>
+				<tr>
+					<td> Your message: </td>
+					<td> <textarea rows = "8" placeholder = "You're better than Black Mesa!"></textarea> </td>
+				</tr>
+				<tr>
+					<td> Result: </td>
+					<td id = "hasil" style = "position:relative;"> - </td>
+				</tr>
+			</table>
+
+			
+			<input type = "submit" id = "submit" class = "dark-gray"> 
+			<input id = "reset"  type = "reset" class = "dark-gray">
+		</form>
+	</div>
+	<div class = "section dark-gray" >
+		<h1> VISIT US. </h1>
+		<h2> Aperture Science Enrichment Center <br>
+			 Federal Forest 4100 Road <br>
+			 PO BOX 1688 <br> 
+			 Upper Michigan 98009, USA</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2854272.411939061!2d-89.15343006849292!3d45.68343785131952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc4f0e1d87e761e51!2sAperture+Science!5e0!3m2!1sen!2s!4v1411710844456" width="800" height="400" style="border:0"></iframe>
+	</div>
+	<footer>
+		made with &lt;3 by <a href = "http://github.com/rakina"> rakina. </a>
+	</footer>
+</body>
