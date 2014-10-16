@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+
+body, html{
+	margin: 0;
+	padding: 50px 100px;
+	background-color: #1a1a1a;
+	font-family: 'Open Sans', sans-serif;
+}
+hr{
+	margin: 20px;
+}
+h2, h3{
+	margin: 5px 0;
+	font-family: 'Quicksand', sans-serif;
+}
+h1{
+	margin: 5px 0;
+	font-family: 'Quicksand', sans-serif;
+}
+p{
+	margin-left: 15px;
+}
+#container{
+	background-color: #f1f2f2;
+	padding: 50px;
+}
+
+iframe{
+	margin: 20px;
+}
+
+form{
+	text-align: center;
+}

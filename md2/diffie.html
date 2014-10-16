@@ -7,42 +7,49 @@
 </head>
 
 <body>
-	<h1> Tugas Pemrograman - Diffie Hellman </h1>
-	<h2> Rakina Zata Amni, 1306398951 </h2>
-	<h3> Kelas A, Asdos Dinda Susanti </h3>
-	<hr>
-	<h2> Apa itu algoritma Diffie Hellman? </h2>
-	<p>
-		Algoritma Diffie Hellman adalah algoritma yang digunakan untuk mendapatkan shared key/kunci rahasia bersama. Kunci yang didapatkan dari algoritma ini dapat digunakan untuk enkripsi. Sang pengirim dapat mengenkripsi dengan kunci yang didapat dan sang penerima dapat mendekripsi dengan kunci yang didapat. 
-	</p>
-	<h2> Bagaimana cara kerja algoritma Diffie Hellman? </h2>
-	<ul>
-		<li> Kedua pihak (sebut saja Alice dan Bob) pertama-tama harus menyetujui sebuah bilangan prima p dan bilangan bulat g yang merupakan primitive root modulo p. </li>
-		<li>Setelah itu, Alice akan memilih sebuah bilangan bulat rahasia a, dan Bob akan memilih sebuah bilangan bulat rahasia b. Alice lalu akan menghitung A = g<sup>a</sup> mod p dan Bob akan menghitung B = g<sup>b</sup> mod p.   </li>
-		<li>Alice lalu akan mengirimkan A ke Bob dan Bob akan mengirimkan B ke Alice.  </li> 
-		<li>Alice akan menghitung shared keynya, yaitu B<sup>a</sup> mod p. Bob akan menghitung shared keynya, A<sup>b</sup> mod p. </li> 
-		<li>Perhatikan bahwa A<sup>b mod p = B<sup>a</sup> mod p = g<sup>ab</sup> mod p.  </li>
-		<li>Alice dan Bob kini memiliki shared key yang sama dan rahasia.  </li>
-	</ul>
-	<iframe width="480" height="360" src="http://www.youtube.com/embed/M-0qt6tdHzk?rel=0&amp;showinfo=0" style="border:0;" allowfullscreen></iframe>
-	<hr>
-	<h2> Program dan Laporan </h2>
-	<ul>
-		<li> <a href = "DiffieHellman.cpp">Source code (C++)</a> </li>
-		<li> <a href = "diffie.exe">Executable program (C++)</a> </li>
-		<li> <a href = "diffie.php"> Web app (PHP)</a> </li>
-		<li> <a href = "Tugas1-1306398951-Rakina-Dinda.pdf">Laporan</a></li>
-	</ul>
-	<p>
-		<b> Instruksi: </b> <br>
-		Untuk kode C++, compile source code atau langsung jalankan .exe-nya. <br>
-		Untuk web app, bacalah tulisan yang ada di halaman web-app. <br> 
-	</p>
-	<hr>
-	<h2> Referensi </h2>
-	<ul>
-		<li><a href = "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Halaman Wikipedia Diffie-Hellman</a></li>
-		<li><a href = "https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/diffie-hellman-key-exchange-part-2"> Video Khan Academy </a></li>
-	</ul>
+	<div id = "container">
+		<div style = "text-align:center">
+			<h1> Tugas Pemrograman - Diffie Hellman </h1>
+			<h3> Rakina Zata Amni, 1306398951 </h3>
+			<h3> Kelas A, Asdos Dinda Susanti </h3>
+			<hr>
+		</div>
+		<h2> Apa itu algoritma Diffie Hellman? </h2>
+		<p>
+			Algoritma Diffie Hellman adalah algoritma yang digunakan untuk mendapatkan <i>shared key</i>/kunci rahasia bersama. Kunci yang didapatkan dari algoritma ini dapat digunakan untuk enkripsi dengan algoritma enkripsi yang menggunakan <i>shared key</i>, seperti Vigenère Cipher. Sang pengirim dapat mengenkripsi dengan kunci yang didapat dan sang penerima dapat mendekripsi dengan kunci yang didapat.
+		</p>
+		<h2> Bagaimana cara kerja algoritma Diffie Hellman? </h2>
+		<ul>
+			<li> Kedua pihak (sebut saja Alice dan Bob) pertama-tama harus menyetujui sebuah bilangan prima <b><i>p</i></b> dan bilangan bulat <b><i>g</i></b> yang merupakan primitive root modulo <b><i>p</i></b>. </li>
+			<li>Setelah itu, Alice akan memilih sebuah bilangan bulat rahasia <b><i>a</i></b>, dan Bob akan memilih sebuah bilangan bulat rahasia <b><i>b</i></b>. Alice lalu akan menghitung <b><i>A</i></b> = <b><i>g<sup>a</sup></i></b> mod <b><i>p</i></b> dan Bob akan menghitung <b><i>B</i></b> =<b><i>g<sup>b</sup></i></b> mod <b><i>p</i></b>.   </li>
+			<li>Alice lalu akan mengirimkan <b><i>A</i></b> ke Bob dan Bob akan mengirimkan <b><i>B</i></b> ke Alice.  </li> 
+			<li>Alice akan menghitung shared keynya, yaitu <b><i>B<sup>a</sup></i></b> mod <b><i>p</i></b>. Bob akan menghitung shared keynya, <b><i>A<sup>b</sup></i></b> mod <b><i>p</i></b>. </li> 
+			<li>Perhatikan bahwa <b><i>A<sup>b</sup></i></b> mod <b><i>p</i></b> = <b><i>B<sup>a</sup></i></b> mod <b><i>p</i></b> = <b><i>g<sup>ab</sup></i></b> mod <b><i>p</i></b>.  </li>
+			<li>Alice dan Bob kini memiliki <i>shared key</i> yang sama dan rahasia.  </li>
+		</ul>
+		<hr>
+		<div style = "text-align: center;"><h2> Video dari Khan Academy, tentang algoritma Diffie-Hellman </h2>
+		<iframe width="480" height="360" src="http://www.youtube.com/embed/M-0qt6tdHzk?rel=0&amp;showinfo=0" style="border:0;" allowfullscreen></iframe>
+		</div>
+		<hr>
+		<h2> Program dan Laporan </h2>
+		<ul>
+			<li> <a href = "DiffieHellman.cpp">Source code (C++)</a> </li>
+			<li> <a href = "diffiehellman.exe">Executable program (C++)</a> </li>
+			<li> <a href = "diffiehellman.php"> Web app (PHP)</a> </li>
+			<li> <a href = "Tugas1-1306398951-Rakina-Dinda.pdf">Laporan</a></li>
+		</ul>
+		<p>
+			<b> Instruksi: </b> <br>
+			Untuk kode C++, compile source code dengan g++ atau langsung jalankan .exe-nya dan ikuti instruksi yang ada di program. <br>
+			Untuk web app, bukalah web app dan ikuti instruksi yang ada di halaman web-app. <br> 
+		</p>
+		<hr>
+		<h2> Referensi </h2>
+		<ul>
+			<li><a href = "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Halaman Wikipedia Diffie-Hellman</a></li>
+			<li><a href = "https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/diffie-hellman-key-exchange-part-2"> Video Khan Academy </a></li>
+		</ul>
+	</div>
 </body>
 </html>
