@@ -1,0 +1,207 @@
+<!-- 
+	Jangan lupa tuliskan Nama, NPM, dan Kelas dibagian atas script Anda
+	Tuliskan semua sumber yang Anda gunakan sebagai referensi (baik itu berupa tutorial, code, library, atau yang lain)
+	Rakina Zata Amni
+	1306398951
+	PPW - A
+	referensi:
+	http://stackoverflow.com/questions/3357553/how-to-store-an-array-in-localstorage
+	http://stackoverflow.com/questions/8951810/how-to-parse-json-data-with-jquery-javascript
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>angklungstore.com</title>
+		<meta charset="utf-8" />
+		<!-- Silakan tambahkan CSS -->
+		<link rel="stylesheet" href = "style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
+		<script>
+			var pilihan = "";
+			var function_isi = function(bebas,category){
+				
+				if (category == "" || category == "semua") bebas = true;
+				var barang = JSON.parse(localStorage.getItem("barang"));
+				$("#listProduk").html("");
+				for (var i = 0; i < barang.length; ++i){
+						if ((bebas || (barang[i].kategori == category)) && barang[i].stok>0){
+							$("#listProduk").append(
+								"<div class = 'barang' id = '"+barang[i].id+"'> <img src='images/"
+								+barang[i].gambar+"' alt =''>"
+								+"<h1>"+barang[i].nama+"</h1>"
+								+"<h3> Rp. "+barang[i].harga+"K</h3>"
+								+"<h3>Stok: "+barang[i].stok+"</h3>"
+								+"<button class = 'add' value = '"+i+"'>Add to Cart</button>"
+								+"</div>"
+							);
+						}
+					}
+				if (sessionStorage.getItem("cart")!== null){
+					updateCart(JSON.parse(sessionStorage.getItem("cart")));
+				}
+				$(".add").click(function(){
+						var cart=[];
+						if (sessionStorage.getItem("cart")!== null){
+							cart = JSON.parse(sessionStorage.getItem("cart"));
+						}
+						var barang = JSON.parse(localStorage.getItem("barang"));
+						var idx = parseInt($(this).val());
+						cart.push(barang[idx]);
+						updateCart(cart);
+					});
+			};
+			
+
+			// Silakan tuliskan script Anda di sini. Boleh eksternal file
+			$(document).ready(function(){
+				
+
+				if(!localStorage.barang){				
+					getBarang();
+				}
+				else function_isi(true,"");
+				if (sessionStorage.getItem("cart") !== null){
+					updateCart(JSON.parse(sessionStorage.getItem("cart")));
+				}
+				else{
+					sessionStorage.setItem("cart",JSON.stringify([]));
+					updateCart([]);
+				}
+				// tambahkan script lainnya yang dibutuhkan
+				
+				$("select").change(function(){
+					// do something, ketika user memilih kategori
+					pilihan = $(this).val();
+					function_isi(false,pilihan);
+
+				});
+				
+
+
+			
+
+				$(".del").click(function(){
+					var idx = parseInt($(this).val());
+					var cart = JSON.parse(sessionStorage.getItem("cart"));
+					if (confirm("Yakin akan menghapus "+cart[idx].nama+" dari keranjang?")){
+						cart.splice(idx,1);
+						updateCart(cart);
+					}
+				});
+
+
+			});
+			
+			function getBarang(){
+				$.ajax({
+					url: "shop.txt",
+					dataType: "json",
+					success: function(data){
+						// do something, jika sukses baca file
+						var barang = data.barang;
+						localStorage.setItem("barang",JSON.stringify(barang));
+						function_isi(true,"");
+					}
+
+				});
+			}
+			// tambahkan fungsi lain yang dibutuhkan
+
+			function updateCart(cart){
+				var totalHarga = 0;
+				var isi = "<table>"
+				isi+= ("<tr><th>Nama</th><th>Jumlah</th><th>Harga</th><th>Total</th><th></th></tr>");
+				for (var i = 0; i < cart.length; ++i){
+					isi+=("<tr><td>"+cart[i].nama+"</td><td>1</td><td>Rp. "+cart[i].harga+"K</td><td>Rp. "+cart[i].harga+"K </td><td><button class = 'del' value ='"+i+"'>Delete</button></td></tr>");
+					totalHarga += cart[i].harga;
+
+				}
+				isi+=("<tr> <td>Total</td> <td></td> <td></td> <td>Rp. "+totalHarga+"K </td></tr>")
+				isi+=('</table><button id="beli">Beli Barang</button>');
+				$("#keranjang").html(isi);
+				sessionStorage.setItem("cart",JSON.stringify(cart));
+
+				$(".del").click(function(){
+					var idx = parseInt($(this).val());
+					var cart = JSON.parse(sessionStorage.getItem("cart"));
+					if (confirm("Yakin akan menghapus "+cart[idx].nama+" dari keranjang?")){
+						cart.splice(idx,1);
+						updateCart(cart);
+					}
+				});
+				$("#beli").click(function(){
+					// do something, ketika button beli diklik
+					if (sessionStorage.getItem("cart") !== null){
+							var cart = JSON.parse(sessionStorage.getItem("cart"));
+							if (cart.length == 0){
+								alert("Keranjang anda masih kosong!");
+								return;
+							}
+						if (confirm("Anda yakin membeli produk kami?")){
+							
+							var barang = JSON.parse(localStorage.getItem("barang"));
+							var bisa = true;
+							for (var i = 0; i < barang.length; ++i){
+								var sisa = barang[i].stok;
+								for (var j = 0; j < cart.length; ++j){
+									if (barang[i].nama == cart[j].nama) sisa--;
+								}
+								if (sisa < 0)
+									bisa = false;
+							}
+							if (!bisa){
+								// ada yang tidak cukup
+								alert("Stok tidak mencukupi!");
+								return;
+							}
+							for (var i = 0; i < barang.length; ++i){
+								var sisa = barang[i].stok;
+								for (var j = 0; j < cart.length; ++j){
+									if (barang[i].nama == cart[j].nama) sisa--;
+								}
+								barang[i].stok = sisa;
+
+							}
+							localStorage.setItem("barang",JSON.stringify(barang));
+							updateCart([]);
+							function_isi(false,pilihan);
+						}
+					}
+					else
+						alert("Keranjang anda masih kosong!");
+
+				});
+
+	
+			}
+			
+
+				
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>AngklungStore.com</h1>
+		</header>
+		<nav>
+			<p>Produk Kategori</p>
+			<select>
+				<option value="semua" selected="selected">Semua kategori</option>
+				<option value="pakaian">Pakaian</option>
+				<option value="sepatu">Sepatu</option>
+				<option value="gadget">Gadget</option>
+			</select>
+		</nav>
+		<div class="content">
+			<div id="listProduk">
+				<!-- Daftar barang ditampilkan di sini -->
+			</div>
+			<div id="keranjang">
+				<!-- Daftar barang yang ada di keranjang dilist di sini -->
+				<button id="beli">Beli Barang</button>
+			</div>
+		</div>
+		<footer><p>Copyright: Fasilkom 2014</p></footer>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<head>
+	<meta charset = "utf-8">
+	<title> Hangman </title>
+	<link rel = "icon" href = "img/7.png">
+	<link rel = "stylesheet" href = "style.css">
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+	<script type = "text/javascript" src = "hangman.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id = "game">
+		<img id = "hangman" src = "img/0.png" alt="hangman">
+		<div id = "board">
+
+		</div>
+		<div id = "keyboard" style = "display:none;">
+			<button value="q" id="q">q</button>
+			<button value="w" id="w">w</button>
+			<button value="e" id="e">e</button>
+			<button value="r" id="r">r</button>
+			<button value="t" id="t">t</button>
+			<button value="y" id="y">y</button>
+			<button value="u" id="u">u</button>
+			<button value="i" id="i">i</button>
+			<button value="o" id="o">o</button>
+			<button value="p" id="p">p</button>
+			<br/>
+			&nbsp;&nbsp;&nbsp;
+			<button value="a" id="a">a</button>
+			<button value="s" id="s">s</button>
+			<button value="d" id="d">d</button>
+			<button value="f" id="f">f</button>
+			<button value="g" id="g">g</button>
+			<button value="h" id="h">h</button>
+			<button value="j" id="j">j</button>
+			<button value="k" id="k">k</button>
+			<button value="l" id="l">l</button>
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button value="z" id="z">z</button>
+			<button value="x" id="x">x</button>
+			<button value="c" id="c">c</button>
+			<button value="v" id="v">v</button>
+			<button value="b" id="b">b</button>
+			<button value="n" id="n">n</button>
+			<button value="m" id="m">m</button>
+		</div>
+		<button id = "play">Play</button>
+	</div>
+	<div id = "stat">
+		<div>
+			<h3> Score </h3>
+			<div id = "score">0</div>
+		</div>
+		<table >
+			<tr>
+				<th> Win </th>
+				<th> Lose </th>
+			</tr>
+			<tr>
+				<td id = "win"> 0 </td>
+				<td id = "lose"> 0 </td>
+			</tr>
+		</table>
+		<table id = "log">
+			<tr>
+				<th> No </th>
+				<th> Score </th>
+			</tr>
+		</table>
+		<button id = "reset">reset</button>
+	</div>
+</body>

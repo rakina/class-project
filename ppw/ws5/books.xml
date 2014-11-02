@@ -1,0 +1,57 @@
+<books>
+	<book>
+		<category>Computer</category>
+		<title>Learning Phyton, 5th Edition</title>
+		<author>Mark Lutz</author>
+		<price>40.89</price>
+	</book>
+	
+	<book>
+		<category>Computer</category>
+		<title>Web Design with HTML, CSS, JavaScript and jQuery Set</title>
+		<author>Jon Duckett</author>
+		<price>38.69</price>
+	</book>
+	
+	<book>
+		<category>Computer</category>
+		<title>Java: A Beginner's Guide></title>
+		<author>Herbert Schildt</author>
+		<price>20.40</price>
+	</book>
+	
+	<book>
+		<category>Health</category>
+		<title>Diagnostic and Statistical Manual of Mental Disorders</title>
+		<author>American Psychiatric Association</author>
+		<price>38.88</price>
+	</book>
+	
+	<book>
+		<category>Health</category>
+		<title>The Pillars of Health</title>
+		<author>John Pierre</author>
+		<price>16.41</price>
+	</book>
+	
+	<book>
+		<category>Health</category>
+		<title>It Starts With Food</title>
+		<author>Melissa Hartwig</author>
+		<price>14.49</price>
+	</book>
+	
+	<book>
+		<category>Cooking</category>
+		<title>How to Cook Everything Fast</title>
+		<author>Mark Bittman</author>
+		<price>21.00</price>
+	</book>
+	
+	<book>
+		<category>Cooking</category>
+		<title>The Heart of the Plate</title>
+		<author>Mollie Katzen</author>
+		<price>18.53</price>
+	</book>
+</books>

@@ -1,0 +1,10 @@
+{"books": [
+	{"category":"Computer", "title":"Learning Phyton, 5th Edition", "author":"Mark Lutz", "price":"40.89"},
+	{"category":"Computer", "title":"Web Design with HTML, CSS, JavaScript and jQuery Set", "author":"Jon Duckett", "price":"38.69"},
+	{"category":"Computer", "title":"Java: A Beginner's Guide", "author":"Herbert Schildt", "price":"20.40"},
+	{"category":"Health", "title":"Diagnostic and Statistical Manual of Mental Disorders", "author":"American Psychiatric Association", "price":"38.88"},
+	{"category":"Health", "title":"The Pillars of Health", "author":"John Pierre", "price":"16.41"},
+	{"category":"Health", "title":"It Starts With Food", "author":"Melissa Hartwig", "price":"14.49"},
+	{"category":"Cooking", "title":"How to Cook Everything Fast", "author":"Mark Bittman", "price":"21.00"},
+	{"category":"Cooking", "title":"The Heart of the Plate", "author":"Mollie Katzen", "price":"18.53"}
+]}

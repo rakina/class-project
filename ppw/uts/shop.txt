@@ -1,0 +1,15 @@
+{"barang":[
+			{"id":"P001", "nama":"Kaos", "kategori":"pakaian", "harga": 100, "stok": 5, "gambar":"1.jpg"},
+			{"id":"P002", "nama":"Jaket", "kategori":"pakaian", "harga": 250, "stok": 4, "gambar":"2.jpg"},
+			{"id":"P003", "nama":"Rok", "kategori":"pakaian", "harga": 50, "stok": 7, "gambar":"3.jpg"},
+			{"id":"P004", "nama":"Celana", "kategori":"pakaian", "harga": 60, "stok": 10, "gambar":"4.jpg"},
+			{"id":"P005", "nama":"Dress", "kategori":"pakaian", "harga": 300, "stok": 8, "gambar":"5.jpg"},
+			{"id":"S001", "nama":"High Heels", "kategori":"sepatu", "harga": 50, "stok": 5, "gambar":"6.jpg"},
+			{"id":"S002", "nama":"Sandal", "kategori":"sepatu", "harga": 10, "stok": 12, "gambar":"7.jpg"},
+			{"id":"S003", "nama":"Sepatu Olahraga", "kategori":"sepatu", "harga": 100, "stok": 7, "gambar":"8.jpg"},
+			{"id":"G001", "nama":"Samsung", "kategori":"gadget", "harga": 2000, "stok": 7, "gambar":"9.jpg"},
+			{"id":"G002", "nama":"iPhone", "kategori":"gadget", "harga": 3050, "stok": 8, "gambar":"10.jpg"},
+			{"id":"G003", "nama":"Nokia", "kategori":"gadget", "harga": 1500, "stok": 7, "gambar":"11.jpg"},
+			{"id":"G004", "nama":"Sony", "kategori":"gadget", "harga": 2200, "stok": 10, "gambar":"12.jpg"},
+			{"id":"G005", "nama":"Motorola", "kategori":"gadget", "harga": 1200, "stok": 6, "gambar":"13.jpg"}
+]}

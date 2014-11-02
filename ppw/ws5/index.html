@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+	<meta charset = "utf-8">
+	<title> JSON! </title>
+	
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+	<script type = "text/javascript">
+		$(document).ready(function(){
+			$("select").change(function(){
+				$("#hasil").html("<table><tr><th>Title</th><th>Author</th><th>Price</th></tr>");
+				var cat = $(this).val();
+				$.getJSON( "books.json", function( data ) {
+				  for (var i in data.books){
+				  //	alert(data.books[i].category+"-"+cat);
+				  	if (data.books[i].category == cat)
+				  		$("#hasil").append("<tr><td>"+data.books[i].title+"</td><td>"+data.books[i].author+"</td><td>"+data.books[i].price+"</td></tr>");
+				   }  
+					$("#hasil").append("</table>");
+				});
+			});
+		});
+	</script>
+</head>
+<html>
+<body>
+<select>
+  <option value="Computer">Computer</option>
+  <option value="Health">Health</option>
+  <option value="Cooking">Cooking</option>
+</select>
+<div id = "hasil"> </div>
+</body>
+</html>

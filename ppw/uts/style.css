@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto|Cabin|Oswald);
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two);
+body,html{
+	font-family: 'Roboto',sans-serif;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #1a1a1a;
+	color: #f1f1f2;
+}
+.content{
+	width: 100%;
+	background-color: white;
+	color: #1a1a1a;
+	text-align: center;
+}
+
+.barang{
+	text-align: center;
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	padding: 25px 20px;
+}
+ h1,h3{
+	margin: 0;
+}
+
+#listProduk{
+	display: inline-block;
+	margin: 0 auto;
+	
+}
+
+tr, th{
+	padding: 5px;
+}
+
+header{
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+	font-size: 32pt;
+	margin: 0;
+	margin-top: 50px;
+}
+
+nav{
+	text-align: center;
+	padding: 20px;
+}
+
+#keranjang{
+	text-align: center;
+	padding: 50px;
+}
+
+footer{
+	text-align: right;
+	padding: 0 50px;
+
+}
+
+button{
+	color: #f1f1f2;
+	background-color: #1a1a1a;
+	border: none;
+		
+	margin: 5px;
+	padding: 8px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#beli{
+	background-color: #c0392b;
+	font-size: 18pt;
+	margin: 10px;
+}
+
+table{	
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+th{
+	background-color: #1a1a1a;
+	color: #f1f1f2;
+}
+
+.del{
+	padding: 3px;
+	font-size: 10pt;
+}
